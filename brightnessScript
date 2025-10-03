@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+brightness=brightnessctl -m | cut --bytes=31,32,33,34
+
+retval=""
+
+for i in {}
