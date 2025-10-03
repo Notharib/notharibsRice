@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+DIR=${1?Error:No directory given}
+
+wal -n -i "${DIR}"
+
+python azoteChange.py "${DIR}"
+
+./.azotebg
+
+oomox-cli -o walGenerated  ~/.cache/wal/colors-oomox
+
+xrdb -override ~/.cache/wal/colors.Xresources
+
+spicetify apply
