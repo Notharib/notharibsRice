@@ -16,6 +16,7 @@ cd scripts
 
 curl -O -# https://download.kde.org/stable/kdenlive/25.08/linux/kdenlive-25.08.3-x86_64.AppImage
 curl -O -# https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-linux-x86_64.tar.gz
+curl -O -# https://cdn1.waterfox.net/waterfox/releases/6.6.6/Linux_x86_64/waterfox-6.6.6.tar.bz2
 cd
 
 cp ~/notharibsRice/.vimrc ~/
