@@ -1,0 +1,22 @@
+#!/bin/bash
+
+sudo pacman -S gtklock NetworkManager cava bluetui fzf unzip emptty azote rofi kitty flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks base-devel
+
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+cd
+
+yay -S localsend-bin swayfx themix-full-git
+
+flatpak install flathub md.obsidian.Obsidian
+
+mkdir scripts
+cd scripts
+
+curl -O -# https://download.kde.org/stable/kdenlive/25.08/linux/kdenlive-25.08.3-x86_64.AppImage
+curl -O -# https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-linux-x86_64.tar.gz
+cd
+
+cp ~/notharibsRice/.vimrc ~/
+

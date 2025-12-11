@@ -12,28 +12,29 @@ set $mod Mod4
 set $left h
 set $down j
 set $up k
-set $right n
+set $right o
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher
-set $menu rofi -show
+set $menu rofi -show drun
 
-# Wallpaper
+### Output configurationi
+
+exec pipewire
+
 exec ~/.azotebg
 
 include "$HOME/.cache/wal/colors-sway"
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg ~/notharibsRice/background/cool-wallpaper.png stretch
+output eDP-1 {
+	mode 1366x786@60.059Hz
+	pos 1366 0
+}
+
 #
 # Example configuration:
 #
-output eDP-1 {
-	mode 1366x768@60.059Hz
-	pos 1366 0
-}
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -209,30 +210,32 @@ bindsym $mod+r mode "resize"
 # Utilities:
 #
     # Special keys to adjust volume via PulseAudio
-    bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-    bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-    bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym $mod+Shift+p exec grim
+    bindsym $mod+P exec grim
+
+set $transp B0
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-	swaybar_command swaybar
-	position top
-	status_command i3blocks
-	colors {
-		background $background
-		separator $color7
-		inactive_workspace $background $background #FFFFFF
-		focused_workspace $foreground $foreground $color0
-		urgent_workspace $color8 $color8 $color0	
+    position top
+    status_command i3blocks
+
+    colors {
+        	background $background$transp
+		separator $color7$transp
+		inactive_workspace $background$transp $background$transp #FFFFFF
+		focused_workspace $foreground$transp $foreground$transp $color0
+		urgent_workspace $color8 $color8 $color0
 	}
 }
 
@@ -243,17 +246,18 @@ gaps vertical 5
 
 default_border none
 
-# Spiralling window
+corner_radius 10
+blur enable
+shadows enable
+shadow_blur_radius 12
+
 exec ./persway/target/debug/persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
 
-#Binding shortcuts
-bindsym $mod+Shift+f exec librewolf
+set $obspath /var/lib/flatpak/app/md.obsidian.Obsidian/x86_64/stable/004cbe1a4d3b12b92f697dcf153e3f34cf24e002a30dabf5dd78794117e12829/files/obsidian
+
+bindsym $mod+Shift+f exec ~/scripts/LocalSend-1.17.0-linux-x86-64.AppImage
 bindsym $mod+Shift+m exec firefox
 bindsym $mod+x exec gtklock
 bindsym $mod+Shift+l exec code-oss
-bindsym $mod+Shift+o exec ./Downloads/LM-Studio-0.3.27-4-x64.AppImage
-bindsym $mod+Shift+Return exec flatpak run md.obsidian.Obsidian
-
-
-
+bindsym $mod+Shift+Return exec $obspath
 include /etc/sway/config.d/*

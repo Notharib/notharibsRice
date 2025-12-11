@@ -1,0 +1,3 @@
+percentage = ${"upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | cut -c 25,26,27,28,29,30"}
+
+echo $percentage

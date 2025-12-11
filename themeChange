@@ -8,7 +8,7 @@ python azoteChange.py "${DIR}"
 
 ./.azotebg
 
-oomox-cli -o walGenerated  ~/.cache/wal/colors-oomox
+./var/lib/flatpak/app/com.github.themix_project.Oomox/current/active/files/opt/oomox/plugins/theme_oomox/change_colour.sh -o walGenerated  ~/.cache/wal/colors-oomox -t ~/.themes/
 
 xrdb -override ~/.cache/wal/colors.Xresources
 

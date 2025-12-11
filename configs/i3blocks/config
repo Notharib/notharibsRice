@@ -1,32 +1,23 @@
 [kernel]
-command=uname -r
+command=uname -n -r
 interval=once
 
 [volume-pipewire]
-command=~/Downloads/i3blocks-contrib-master/volume-pipewire/volume-pipewire
+command=~/i3blocks-contrib-master/volume-pipewire/volume-pipewire
 interval=persist
 SUBSCRIBE=1
 USE_ALSA_NAME=1
 LONG_FORMAT="${VOL}% [${INDEX}:${NAME}]"
 
+[date]
+command=date +%d/%m/%y
+interval=once
 
-[battery]
-command= ~/Downloads/i3blocks-contrib-master/battery/battery
-interval=30
-LABEL=BAT 
-
-# Update time every 5 seconds
+#Update time every 5 seconds
 [time]
 command=date +%T
 interval=1
 
-[shutdown_menu]
-full_text=QUIT
-# If you are using FontAwesome, we recommend the power-off icon:
-# http://fontawesome.io/icon/power-off/
-command=~/Downloads/i3blocks-contrib-master/shutdown_menu/shutdown_menu
-ROFI_TEXT=Menu:
-ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
-ENABLE_CONFIRMATIONS=true
-LAUNCHER=rofi
-#LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}
+[battery]
+command= upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | cut -c 26,27,28,29,30
+interval=30
