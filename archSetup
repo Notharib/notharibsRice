@@ -7,7 +7,7 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S i3blocks gtklock NetworkManager cava bluetui fzf unzip emptty azote rofi kitty flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks base-devel
+sudo pacman -S i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi kitty flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks base-devel
 
 yay -S localsend-bin swayfx themix-full-git
 
@@ -16,7 +16,7 @@ flatpak install flathub md.obsidian.Obsidian
 mkdir scripts
 cd scripts
 
-# These apps you can't get directly form the AUR or from the repos, so I curl in the AppImage/Tarball manually
+# These apps you can't get directly form the AUR or from the repos, so I curl/git clone in the AppImage/Tarball manually
 echo ""
 echo "kdenlive (Video Editor)"
 curl -O -# https://download.kde.org/stable/kdenlive/25.08/linux/kdenlive-25.08.3-x86_64.AppImage
@@ -29,6 +29,8 @@ curl -O -# https://cdn1.waterfox.net/waterfox/releases/6.6.6/Linux_x86_64/waterf
 tar -xf waterfox-6.6.6.tar.bz2
 rm waterfox-6.6.6.tar.bz2
 cd
+echo "Persway (cool tiling addon)"
+git clone https://github.com/johnae/persway.git
 
 # Set up of config files
 cp ~/notharibsRice/.vimrc ~/
