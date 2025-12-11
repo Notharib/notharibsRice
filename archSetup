@@ -29,8 +29,12 @@ curl -O -# https://cdn1.waterfox.net/waterfox/releases/6.6.6/Linux_x86_64/waterf
 tar -xf waterfox-6.6.6.tar.bz2
 rm waterfox-6.6.6.tar.bz2
 cd
+echo ""
 echo "Persway (cool tiling addon)"
 git clone https://github.com/johnae/persway.git
+echo ""
+echo "NPM setup (boring coding stuff)"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 # Set up of config files
 cp ~/notharibsRice/.vimrc ~/
