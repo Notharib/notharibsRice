@@ -8,11 +8,11 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks
+sudo pacman -S --needed zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks
 
 yay -S localsend-bin swayfx themix-full-git
 
-flatpak install flathub md.obsidian.Obsidian
+flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.discordapp.Discord
 
 mkdir scripts
 cd scripts
@@ -20,13 +20,13 @@ cd scripts
 # These apps you can't get directly form the AUR or from the repos, so I curl/git clone in the AppImage/Tarball manually
 echo ""
 echo "kdenlive (Video Editor)"
-curl -O -# https://download.kde.org/stable/kdenlive/25.08/linux/kdenlive-25.08.3-x86_64.AppImage
+curl -O# https://download.kde.org/stable/kdenlive/25.08/linux/kdenlive-25.08.3-x86_64.AppImage
 echo ""
 echo "SuperTuxKart (Peak Game)"
-curl -O -# https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-linux-x86_64.tar.gz
+curl -O# https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-linux-x86_64.tar.gz
 echo ""
 echo "WaterFox (Browser)"
-curl -O -# https://cdn1.waterfox.net/waterfox/releases/6.6.6/Linux_x86_64/waterfox-6.6.6.tar.bz2
+curl -O# https://cdn1.waterfox.net/waterfox/releases/6.6.6/Linux_x86_64/waterfox-6.6.6.tar.bz2
 tar -xf waterfox-6.6.6.tar.bz2
 rm waterfox-6.6.6.tar.bz2
 cd
