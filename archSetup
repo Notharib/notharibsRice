@@ -36,6 +36,8 @@ git clone https://github.com/johnae/persway.git
 echo ""
 echo "NPM setup (boring coding stuff)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+echo ""
+echo "pywal-obisdianmd (Pywal integration with pywal)"
 
 # Setting up zsh and ohmyzsh
 sudo chsh -s $(which zsh)
