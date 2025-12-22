@@ -8,9 +8,9 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S --needed zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks
+sudo pacman -S --needed git nnn zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks
 
-yay -S localsend-bin swayfx themix-full-git
+yay -S localsend-bin swayfx themix-full-git tty-clock
 
 flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.discordapp.Discord
 
