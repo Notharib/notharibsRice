@@ -8,11 +8,11 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S --needed git nnn zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop vim i3blocks
+sudo pacman -S --needed swaybg grim lazygit git nnn zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim i3blocks
 
 yay -S localsend-bin swayfx themix-full-git tty-clock
 
-flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.discordapp.Discord
+flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.discordapp.Discord com.rtosta.zapzap com.stremio.Stremio flatpak install flathub net.waterfox.waterfox
 
 mkdir scripts
 cd scripts
@@ -24,26 +24,22 @@ curl -O# https://download.kde.org/stable/kdenlive/25.08/linux/kdenlive-25.08.3-x
 echo ""
 echo "SuperTuxKart (Peak Game)"
 curl -O# https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-linux-x86_64.tar.gz
-echo ""
-echo "WaterFox (Browser)"
-curl -O# https://cdn1.waterfox.net/waterfox/releases/6.6.6/Linux_x86_64/waterfox-6.6.6.tar.bz2
-tar -xf waterfox-6.6.6.tar.bz2
-rm waterfox-6.6.6.tar.bz2
 cd
 echo ""
 echo "Persway (cool tiling addon)"
 git clone https://github.com/johnae/persway.git
+cd persway
+cargo build
+cd
 echo ""
 echo "NPM setup (boring coding stuff)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 echo ""
-echo "pywal-obisdianmd (Pywal integration with pywal)"
-
-# Setting up zsh and ohmyzsh
-sudo chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm .zshrc
-ln -s ~/notharibsRice/.zshrc ~/
+echo "pywal-obsidianmd (Pywal integration with pywal)"
+git clone https://github.com/poach3r/pywal-obsidianmd.git
+cd pywal-obsidianmd
+chmod +x pywal-obsidianmd.sh
+cd
 
 # Set up of config files
 cp ~/notharibsRice/.vimrc ~/
@@ -51,10 +47,27 @@ cp ~/notharibsRice/.vimrc ~/
 mkdir -p ~/.config
 mkdir -p ~/.config/sway/
 mkidr -p ~/.config/rofi/
-mkidr -p ~/.config/i3blocks
+mkidr -p ~/.config/i3blocks/
 mkdir -p ~/.config/foot/
+mkdir -p ~/.config/nvim/
 
 ln -s ~/notharibsRice/configs/sway/config ~/.config/sway/
 ln -s ~/notharibsRice/configs/rofi/config.rasi ~/.config/rofi/
 ln -s ~/notharibsRice/configs/i3blocks/config ~/.config/i3blocks/
 ln -s ~/notharibsRice/configs/foot/foot.ini ~/.config/foot/
+
+git clone https://github.com/LazyVim/starter ~/.config/nvim/
+rm -rf ~/.config/nvim/.git
+
+# Setting up zsh and ohmyzsh ()
+sudo chsh -s $(which zsh)
+rm .zshrc
+ln -s ~/notharibsRice/.zshrc ~/
+# ALWAYS HAVE THIS LINE RUN LAST
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Things still to setup manually:
+#   1) First Time Azote run
+#   2) Run the themeChange script to generate colours
+#   3) Enable services (emptty, NetworkManager, etc)
+#   4) Setup LazyVim config

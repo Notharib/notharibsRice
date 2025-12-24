@@ -113,7 +113,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
-#eval "$(thefuck --alias fuck)"
+eval "$(thefuck --alias fuck)"
 
 fastfetch
 
@@ -125,8 +125,8 @@ alias clr='clear && fastfetch'
 alias update-grub='grub-mkconfig -o /boot/grub/grub.cfg'
 alias intest='ping archlinux.org'
 alias infix='echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" | sudo tee /etc/resolv.conf'
-alias job='sudo poweroff'
-alias rb='sudo reboot'
+alias job='poweroff'
+alias rb='reboot'
 alias perc='upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage'
 alias folderClr='py ~/scripts/clearFolder.py'
 alias kernClr='sudo vkpurge rm all'
@@ -135,9 +135,10 @@ alias cock='tty-clock -sc'
 alias bma='blueman-applet &'
 alias bm='blueman-manager'
 alias wf='./scripts/waterfox/waterfox'
-alias sclr='clear && fastfetch -l void2_small'
+alias sclr='clear && fastfetch -l EndeavourOS_small'
 alias please='sudo'
 alias fman='nnn -C'
+alias stremio='com.stremio.Stremio'
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

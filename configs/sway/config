@@ -14,11 +14,11 @@ set $down j
 set $up k
 set $right o
 # Your preferred terminal emulator
-set $term kitty
+set $term foot
 # Your preferred application launcher
 set $menu rofi -show drun
 
-### Output configurationi
+### Output configuration
 
 exec pipewire
 
@@ -229,13 +229,14 @@ set $transp B0
 bar {
     position top
     status_command i3blocks
+    #font 'JetBrainsMono NFM'
 
     colors {
         	background $background$transp
-		separator $color7$transp
-		inactive_workspace $background$transp $background$transp #FFFFFF
-		focused_workspace $foreground$transp $foreground$transp $color0
-		urgent_workspace $color8 $color8 $color0
+		      separator $color7$transp
+		      inactive_workspace $background$transp $background$transp #FFFFFF
+		      focused_workspace $foreground$transp $foreground$transp $color0
+		      urgent_workspace $color8 $color8 $color0
 	}
 }
 
@@ -253,11 +254,21 @@ shadow_blur_radius 12
 
 exec ./persway/target/debug/persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
 
-set $obspath /var/lib/flatpak/app/md.obsidian.Obsidian/x86_64/stable/004cbe1a4d3b12b92f697dcf153e3f34cf24e002a30dabf5dd78794117e12829/files/obsidian
+bindsym $mod+Shift+f exec localsend
+bindsym $mod+Shift+m exec flatpak run net.waterfox.waterfox
+bindsym $mod+x exec swaylock \
+	--screenshots \
+	--clock \
+	--indicator \
+	--indicator-radius 100 \
+	--indicator-thickness 7 \
+	--effect-blur 7x5 \
+	--effect-vignette 0.5:0.5 \
+	--fade-in 0.2
 
-bindsym $mod+Shift+f exec ~/scripts/LocalSend-1.17.0-linux-x86-64.AppImage
-bindsym $mod+Shift+m exec firefox
-bindsym $mod+x exec gtklock
-bindsym $mod+Shift+l exec code-oss
-bindsym $mod+Shift+Return exec $obspath
+#bindsym $mod+Shift+l exec code-oss
+bindsym $mod+Shift+Return exec flatpak run md.obsidian.Obsidian
+bindsym $mod+Shift+t exec flatpak run com.github.IsmaelMartinez.teams_for_linux
+bindsym $mod+Shift+d exec flatpak run com.discordapp.Discord
+bindsym $mod+Shift+w exec flatpak run com.rtosta.zapzap
 include /etc/sway/config.d/*
