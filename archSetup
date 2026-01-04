@@ -8,11 +8,11 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S --needed swaybg grim lazygit git nnn zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim i3blocks
+sudo pacman -S --needed python-pip brightnessctl swaybg grim lazygit git nnn zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim
 
-yay -S localsend-bin swayfx themix-full-git tty-clock
+yay -S localsend-bin librewolf-bin swayfx tty-clock
 
-flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.discordapp.Discord com.rtosta.zapzap com.stremio.Stremio flatpak install flathub net.waterfox.waterfox
+flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.discordapp.Discord com.rtosta.zapzap com.stremio.Stremio
 
 mkdir scripts
 cd scripts

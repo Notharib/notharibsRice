@@ -255,7 +255,7 @@ shadow_blur_radius 12
 exec ./persway/target/debug/persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
 
 bindsym $mod+Shift+f exec localsend
-bindsym $mod+Shift+m exec flatpak run net.waterfox.waterfox
+bindsym $mod+Shift+m exec librewolf
 bindsym $mod+x exec swaylock \
 	--screenshots \
 	--clock \

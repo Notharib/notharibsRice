@@ -139,6 +139,8 @@ alias sclr='clear && fastfetch -l EndeavourOS_small'
 alias please='sudo'
 alias fman='nnn -C'
 alias stremio='com.stremio.Stremio'
+alias themeChange='./notharibsRice/themeChange'
+
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
