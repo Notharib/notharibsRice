@@ -8,7 +8,7 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S --needed python-pip brightnessctl swaybg grim lazygit git nnn zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip emptty azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim
+sudo pacman -S --needed kdenlive feh mpv python-pip brightnessctl swaybg grim lazygit git ranger zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
 
 yay -S localsend-bin librewolf-bin swayfx tty-clock
 
@@ -18,9 +18,6 @@ mkdir scripts
 cd scripts
 
 # These apps you can't get directly form the AUR or from the repos, so I curl/git clone in the AppImage/Tarball manually
-echo ""
-echo "kdenlive (Video Editor)"
-curl -O# https://download.kde.org/stable/kdenlive/25.08/linux/kdenlive-25.08.3-x86_64.AppImage
 echo ""
 echo "SuperTuxKart (Peak Game)"
 curl -O# https://github.com/supertuxkart/stk-code/releases/download/1.5/SuperTuxKart-1.5-linux-x86_64.tar.gz

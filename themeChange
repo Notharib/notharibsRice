@@ -4,14 +4,8 @@ DIR=${1?Error:No directory given}
 
 wal -n -i "${DIR}"
 
-python lockColourLoader.py
-
 python azoteChange.py "${DIR}"
 
 ./.azotebg
 
-./var/lib/flatpak/app/com.github.themix_project.Oomox/current/active/files/opt/oomox/plugins/theme_oomox/change_colour.sh -o walGenerated ~/.cache/wal/colors-oomox -t ~/.themes/
-
-xrdb -override ~/.cache/wal/colors.Xresources
-
-spicetify apply
+./pywal-obsidianmd/pywal-obsidianmd.sh
