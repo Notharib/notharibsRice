@@ -8,9 +8,9 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S --needed kdenlive feh mpv python-pip brightnessctl swaybg grim lazygit git ranger zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
+sudo pacman -S --needed papirus-icon-theme kdenlive feh mpv python-pip brightnessctl nwg-look swaybg grim lazygit git thunar zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
 
-yay -S localsend-bin librewolf-bin swayfx tty-clock
+yay -S localsend-bin librewolf-bin swayfx tty-clock themix-full-git
 
 flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.discordapp.Discord com.rtosta.zapzap com.stremio.Stremio
 

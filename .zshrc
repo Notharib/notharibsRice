@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump)
+plugins=(git autojump history tmux) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,7 +133,6 @@ alias vpy='./.venv/bin/python'
 alias cock='tty-clock -sc'
 alias sclr='clear && fastfetch -l EndeavourOS_small'
 alias please='sudo'
-alias fman='ranger'
 alias stremio='com.stremio.Stremio'
 alias themeChange='./notharibsRice/themeChange'
 

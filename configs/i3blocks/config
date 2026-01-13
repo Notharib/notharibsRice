@@ -1,5 +1,5 @@
 [kernel]
-command=uname -n -r
+command=uname -onr
 interval=once
 
 [volume-pipewire]

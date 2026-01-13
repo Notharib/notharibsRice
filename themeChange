@@ -8,4 +8,6 @@ python azoteChange.py "${DIR}"
 
 ./.azotebg
 
+oomox-cli -o walGenerated ~/.cache/wal/colors-oomox
+
 ./pywal-obsidianmd/pywal-obsidianmd.sh

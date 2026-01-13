@@ -16,7 +16,7 @@ set $right o
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu rofi -show drun
+set $menu rofi -show drun -icon-theme "Papirus" -show-icons
 
 ### Output configuration
 
@@ -266,7 +266,7 @@ bindsym $mod+x exec swaylock \
 	--effect-vignette 0.5:0.5 \
 	--fade-in 0.2
 
-#bindsym $mod+Shift+l exec code-oss
+bindsym $mod+Shift+l exec thunar
 bindsym $mod+Shift+Return exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+t exec flatpak run com.github.IsmaelMartinez.teams_for_linux
 bindsym $mod+Shift+d exec flatpak run com.discordapp.Discord
