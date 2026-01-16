@@ -16,8 +16,8 @@ set $right o
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu rofi -show drun -icon-theme "Papirus" -show-icons
-
+# set $menu rofi -show drun -icon-theme "Papirus" -show-icons
+set $menu wofi --show drun
 ### Output configuration
 
 exec pipewire
@@ -226,18 +226,22 @@ set $transp B0
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-    status_command i3blocks
-    #font 'JetBrainsMono NFM'
+#bar {
+#    position top
+#    status_command i3blocks
+#    #font 'JetBrainsMono NFM'
+#
+#    colors {
+#        	background $background$transp
+#		      separator $color7$transp
+#		      inactive_workspace $background$transp $background$transp #FFFFFF
+#		      focused_workspace $foreground$transp $foreground$transp $color0
+#		      urgent_workspace $color8 $color8 $color0
+#	}
+#}
 
-    colors {
-        	background $background$transp
-		      separator $color7$transp
-		      inactive_workspace $background$transp $background$transp #FFFFFF
-		      focused_workspace $foreground$transp $foreground$transp $color0
-		      urgent_workspace $color8 $color8 $color0
-	}
+bar {
+	swaybar_command waybar
 }
 
 gaps inner 10

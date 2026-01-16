@@ -8,7 +8,7 @@ makepkg -si
 cd
 
 # Installation of apps
-sudo pacman -S --needed papirus-icon-theme kdenlive feh mpv python-pip brightnessctl nwg-look swaybg grim lazygit git thunar zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote rofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
+sudo pacman -S --needed ttf-jetbrains-mono-nerd papirus-icon-theme kdenlive feh mpv python-pip brightnessctl nwg-look swaybg grim lazygit git thunar waybar zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
 
 yay -S localsend-bin librewolf-bin swayfx tty-clock themix-full-git
 
@@ -47,11 +47,17 @@ mkidr -p ~/.config/rofi/
 mkidr -p ~/.config/i3blocks/
 mkdir -p ~/.config/foot/
 mkdir -p ~/.config/nvim/
+mkdir -p ~/.config/wofi/
+mkdir -p ~/.config/waybar/
 
 ln -s ~/notharibsRice/configs/sway/config ~/.config/sway/
 ln -s ~/notharibsRice/configs/rofi/config.rasi ~/.config/rofi/
 ln -s ~/notharibsRice/configs/i3blocks/config ~/.config/i3blocks/
 ln -s ~/notharibsRice/configs/foot/foot.ini ~/.config/foot/
+ln ~/notharibsRice/configs/wofi/config ~/.config/wofi/
+ln ~/notharibsRice/configs/wofi/style.css ~/.config/wofi/
+ln ~/notharibsRice/configs/waybar/config ~/.config/waybar/
+ln ~/notharibsRice/configs/waybar/style.css ~/.config/waybar/
 
 git clone https://github.com/LazyVim/starter ~/.config/nvim/
 rm -rf ~/.config/nvim/.git

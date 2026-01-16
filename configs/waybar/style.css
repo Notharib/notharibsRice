@@ -1,0 +1,83 @@
+@import "../../.cache/wal/colors-waybar.css";
+*{
+  font-family: JetBrainsMono NFM;
+  border-radius: 8;
+  font-size: 14px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+  background-image: linear-gradient(to bottom, @background 100%);
+  border-radius: 14px;
+  padding: 0px;
+  border-style: none;
+}
+
+#battery,
+#network,
+#clock,
+#custom-kernel,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio {
+  background-image: linear-gradient(to bottom, @color6 100%);
+
+  margin: 6px;
+  margin-right: 6px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: @cursor;
+
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, @color11 100%);
+  color: @cursor;
+  transition-duration: 120ms;
+}
+
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: @foreground;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: @color8;
+}
+#workspaces button.focused {
+  color: @color3;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: @color6;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: @color11;
+}
+
+#battery {
+  background-color: @color6;
+  color: @cursor;
+}
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: @background;
+  background-color: @color11;
+}

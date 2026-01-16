@@ -1,0 +1,73 @@
+@import ".cache/wal/colors-waybar.css";
+* {
+  font-family: JetBrainsMono NFM;
+  background: transparent;
+  color: @cursor;
+}
+
+#window {
+  color: @foreground;
+  border-color: @color6;
+  border-style: solid;
+  border-width: 1px;
+
+
+  background-image: linear-gradient(to bottom, @background 100%);
+  border-radius: 14px;
+}
+#scroll {
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: @foreground;
+}
+#inner-box {
+  padding-top: 12px;
+}
+#entry {
+  border-style: none;
+  border-color: @foreground;
+  color: @foreground;
+  padding: 6px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+  margin-right: 12;
+
+  border-radius: 12px;
+}
+
+#entry:selected {
+  background: ;
+  color: @foreground;
+  font-weight: bold;
+  outline: none;
+}
+
+#input {
+  background-color: @color1;
+  color: @foreground;
+  border-color: @foreground;
+
+  border-style: none;
+  border-bottom-style: solid;
+  border-width: 1px;
+
+  font-style: normal;
+
+  border-radius: 8;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  padding: 12px;
+  margin: 8px;
+}
+#input:focus {
+  background: @background;
+  background-color: @background;
+  border-color: @color6;
+  font-style: italic;
+}
+
+#img {
+  padding: 4px;
+  margin-right: 6px;
+}
