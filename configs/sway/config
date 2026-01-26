@@ -253,8 +253,10 @@ default_border none
 
 corner_radius 10
 blur enable
+
 shadows enable
-shadow_blur_radius 12
+shadow_blur_radius 15
+
 
 exec ./persway/target/debug/persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
 
@@ -273,6 +275,6 @@ bindsym $mod+x exec swaylock \
 bindsym $mod+Shift+l exec thunar
 bindsym $mod+Shift+Return exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+t exec flatpak run com.github.IsmaelMartinez.teams_for_linux
-bindsym $mod+Shift+d exec flatpak run com.discordapp.Discord
+bindsym $mod+Shift+d exec discord
 bindsym $mod+Shift+w exec flatpak run com.rtosta.zapzap
 include /etc/sway/config.d/*

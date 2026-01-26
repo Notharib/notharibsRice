@@ -1,13 +1,13 @@
 @import ".cache/wal/colors-waybar.css";
 * {
-  font-family: JetBrainsMono NFM;
+  font-family: MapleMono NF;
   background: transparent;
   color: @cursor;
 }
 
 #window {
   color: @foreground;
-  border-color: @color6;
+  border-color: @color4;
   border-style: solid;
   border-width: 1px;
 
@@ -63,7 +63,7 @@
 #input:focus {
   background: @background;
   background-color: @background;
-  border-color: @color6;
+  border-color: @color4;
   font-style: italic;
 }
 

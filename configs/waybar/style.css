@@ -1,7 +1,7 @@
 @import "../../.cache/wal/colors-waybar.css";
 *{
   font-family: JetBrainsMono NFM;
-  border-radius: 8;
+  border-radius: 10;
   font-size: 14px;
   padding: 0px;
   background: transparent;
@@ -9,11 +9,12 @@
 
 window#waybar {
   background-image: linear-gradient(to bottom, @background 100%);
-  border-radius: 14px;
+  border-radius: 10px;
   padding: 0px;
   border-style: none;
 }
 
+#backlight,
 #battery,
 #network,
 #clock,
@@ -21,21 +22,21 @@ window#waybar {
 #custom-applauncher,
 #tray,
 #workspaces,
-#pulseaudio {
-  background-image: linear-gradient(to bottom, @color6 100%);
+#pulseaudio,
+#mode{
+  background-image: linear-gradient(to bottom, @color4 100%);
 
-  margin: 6px;
-  margin-right: 6px;
-  padding: 4px 8px;
-  border-radius: 8px;
+  margin: 5px;
+  margin-right: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
   color: @cursor;
 
   border-style: none;
   transition-duration: 120ms;
-}
-
-#clock {
-  margin-right: 6px;
 }
 
 #pulseaudio:hover {
@@ -64,7 +65,7 @@ window#waybar {
   font-weight: bold;
 }
 #workspaces button.active {
-  color: @color6;
+  color: @color4;
   font-weight: bold;
 }
 #workspaces button.urgent {
@@ -72,7 +73,7 @@ window#waybar {
 }
 
 #battery {
-  background-color: @color6;
+  background-color: @color4;
   color: @cursor;
 }
 #battery.warning,
@@ -80,4 +81,12 @@ window#waybar {
 #battery.urgent {
   color: @background;
   background-color: @color11;
+}
+
+#custom-applauncher {
+  margin-left: 5px;
+}
+
+#battery {
+  margin-right: 5px;
 }

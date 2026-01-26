@@ -10,20 +10,27 @@
   "margin-left": 15,
   "modules-left": [
     "custom/applauncher",
-    "sway/workspaces"
+    "sway/workspaces",
+    "sway/mode"
   ],
   "modules-center":[
-    "cava"
   ], 
   "modules-right": [
     "custom/kernel",
     "network",
+    "backlight",
     "pulseaudio",
     "clock",
-    "battery"
+    "battery",
+    "tray"
   ],
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""]
+  },
   "custom/kernel":{
-      "exec":"uname -onr",
+      "exec":"uname -or",
       "format": " {text}"
     },
    "custom/applauncher": {
@@ -36,18 +43,16 @@
     "all-outputs": false,
     "tooltip": false
   },
-  "tray": {
-    "spacing": 10,
-    "tooltip": false
-  },
   "clock": {
-    "format": "󰅐 {:%H:%M}",
-    "tooltip": false
+    "format": "󰅐 {:%H:%M:%S}",
+    "tooltip": true,
+    "tooltip-format": " {:%d/%m/%Y}",
+    "interval": 1
   },
   "network": {
-    "format-wifi": " {bandwidthDownBits}",
-    "format-ethernet": " {bandwidthDownBits}",
-    "format-disconnected": "󰤮 No Network",
+    "format-wifi": " {essid}",
+    "format-ethernet": "󰈀 {ifname}",
+    "format-disconnected": "󰤮  No Network",
     "interval": 5,
     "tooltip": false
   },
@@ -73,7 +78,7 @@
     },
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
-    "format-plugged": "󰂄{capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
     "format-alt": "{icon} {time}",
     "format-full": "󱈑 {capacity}%",
     "format-icons": [

@@ -135,6 +135,7 @@ alias sclr='clear && fastfetch -l EndeavourOS_small'
 alias please='sudo'
 alias stremio='com.stremio.Stremio'
 alias themeChange='./notharibsRice/themeChange'
+alias wayBSync='rm -rf ~/notharibsRice/configs/waybar && cp -r ~/.config/waybar ~/notharibsRice/configs/'
 
 
 export NVM_DIR="$HOME/.config/nvm"

@@ -9,5 +9,7 @@ python azoteChange.py "${DIR}"
 ./.azotebg
 
 oomox-cli -o walGenerated ~/.cache/wal/colors-oomox
+oomox-gnome-colors-icons-cli -o wal-icons ~/.cache/wal/colors-oomox
+gtk-update-icon-cache
 
-./pywal-obsidianmd/pywal-obsidianmd.sh
+./pywal-obsidianmd/pywal-obsidianmd.sh ~/Obsidian\ Vault
