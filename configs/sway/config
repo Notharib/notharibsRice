@@ -258,7 +258,7 @@ shadows enable
 shadow_blur_radius 15
 
 
-exec ./persway/target/debug/persway daemon -w -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
+exec ./persway/target/debug/persway daemon -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
 
 bindsym $mod+Shift+f exec localsend
 bindsym $mod+Shift+m exec librewolf
