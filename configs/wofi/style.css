@@ -32,18 +32,18 @@
   margin-left: 12px;
   margin-right: 12;
 
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 #entry:selected {
-  background: ;
+  background: @color4;
   color: @foreground;
   font-weight: bold;
   outline: none;
 }
 
 #input {
-  background-color: @color1;
+  background-color: @background;
   color: @foreground;
   border-color: @foreground;
 
@@ -51,7 +51,7 @@
   border-bottom-style: solid;
   border-width: 1px;
 
-  font-style: normal;
+  font-style: italic;
 
   border-radius: 8;
   border-bottom-left-radius: 0px;
@@ -61,7 +61,7 @@
   margin: 8px;
 }
 #input:focus {
-  background: @background;
+  background: @color1;
   background-color: @background;
   border-color: @color4;
   font-style: italic;

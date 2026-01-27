@@ -226,36 +226,27 @@ set $transp B0
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-#    status_command i3blocks
-#    #font 'JetBrainsMono NFM'
-#
-#    colors {
-#        	background $background$transp
-#		      separator $color7$transp
-#		      inactive_workspace $background$transp $background$transp #FFFFFF
-#		      focused_workspace $foreground$transp $foreground$transp $color0
-#		      urgent_workspace $color8 $color8 $color0
-#	}
-#}
-
 bar {
 	swaybar_command waybar
 }
 
-gaps inner 10
+gaps inner 5
 gaps outer 5
 gaps horizontal 5
 gaps vertical 5
 
-default_border none
+default_border pixel 1px
+
+# Colours
+client.focused $color4 $color4 $color4 $color4 $color4 
+client.focused_inactive $color1 $color1 $color1 $color1 $color1
+client.unfocused $color4 $color4 $color4 $color4 $color4 
 
 corner_radius 10
 blur enable
 
 shadows enable
-shadow_blur_radius 15
+shadow_blur_radius 10
 
 
 exec ./persway/target/debug/persway daemon -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
