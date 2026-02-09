@@ -1,6 +1,6 @@
 @import "../../.cache/wal/colors-waybar.css";
 *{
-  font-family: JetBrainsMono NFM;
+  font-family: MapleMono NF;
   border-radius: 10;
   font-size: 14px;
   padding: 0px;
@@ -25,6 +25,7 @@ window#waybar {
 #tray,
 #workspaces,
 #pulseaudio,
+#keyboard-state,
 #mode{
   background-image: linear-gradient(to bottom, @color4 100%);
 
@@ -68,7 +69,7 @@ window#waybar {
   font-weight: bold;
 }
 #workspaces button.active {
-  color: @color4;
+  color: @color2;
   font-weight: bold;
 }
 #workspaces button.urgent {

@@ -11,9 +11,9 @@ cd
 ./notharibsRice/chaotic.sh
 
 # Installation of apps
-sudo pacman -S --needed localsend librewolf swayfx tty-clock themix-full-git ttf-jetbrains-mono-nerd papirus-icon-theme kdenlive feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
+sudo pacman -S --needed obsidian localsend librewolf swayfx tty-clock themix-full-git ttf-jetbrains-mono-nerd papirus-icon-theme kdenlive feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
 
-flatpak install flathub md.obsidian.Obsidian com.github.IsmaelMartinez.teams_for_linux com.rtosta.zapzap com.stremio.Stremio
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux com.rtosta.zapzap com.stremio.Stremio
 
 mkdir scripts
 cd scripts
@@ -44,21 +44,19 @@ cp ~/notharibsRice/.vimrc ~/
 
 mkdir -p ~/.config
 mkdir -p ~/.config/sway/
-mkidr -p ~/.config/rofi/
-mkidr -p ~/.config/i3blocks/
 mkdir -p ~/.config/foot/
+mkdir -p ~/.config/kitty
 mkdir -p ~/.config/nvim/
 mkdir -p ~/.config/wofi/
 mkdir -p ~/.config/waybar/
 
 ln -s ~/notharibsRice/configs/sway/config ~/.config/sway/
-ln -s ~/notharibsRice/configs/rofi/config.rasi ~/.config/rofi/
-ln -s ~/notharibsRice/configs/i3blocks/config ~/.config/i3blocks/
 ln -s ~/notharibsRice/configs/foot/foot.ini ~/.config/foot/
-ln ~/notharibsRice/configs/wofi/config ~/.config/wofi/
-ln ~/notharibsRice/configs/wofi/style.css ~/.config/wofi/
-ln ~/notharibsRice/configs/waybar/config ~/.config/waybar/
-ln ~/notharibsRice/configs/waybar/style.css ~/.config/waybar/
+ln -s ~/notharibsRice/configs/kitty/kitty.conf ~/.config/kitty/
+ln -s ~/notharibsRice/configs/wofi/config ~/.config/wofi/
+ln -s ~/notharibsRice/configs/wofi/style.css ~/.config/wofi/
+ln -s ~/notharibsRice/configs/waybar/config ~/.config/waybar/
+ln -s~/notharibsRice/configs/waybar/style.css ~/.config/waybar/
 
 git clone https://github.com/LazyVim/starter ~/.config/nvim/
 rm -rf ~/.config/nvim/.git

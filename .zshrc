@@ -135,9 +135,11 @@ alias sclr='clear && fastfetch -l EndeavourOS_small'
 alias please='sudo'
 alias stremio='com.stremio.Stremio'
 alias themeChange='./notharibsRice/themeChange'
-alias wayBSync='rm -rf ~/notharibsRice/configs/waybar && cp -r ~/.config/waybar ~/notharibsRice/configs/'
+alias update='sudo pacman -Syu && yay -Syu --aur'
+alias nclr='clear && fastfetch -l none'
 
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias 67=job

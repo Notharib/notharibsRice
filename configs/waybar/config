@@ -11,7 +11,8 @@
   "modules-left": [
     "custom/applauncher",
     "sway/workspaces",
-    "sway/mode"
+    "sway/mode",
+    "keyboard-state"
   ],
   "modules-center":[
   ], 
@@ -24,17 +25,25 @@
     "battery",
     "tray"
   ],
+  "keyboard-state":{
+    "format": "{icon} {name}",
+    "capslock": true,
+    "format-icons": {
+      "locked": " ",
+      "unlocked":" "
+    }
+  },
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
-    "format-icons": ["󰃜","󰃛", ""]
+    "format-icons": ["", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"]
   },
   "custom/kernel":{
       "exec":"uname -or",
       "format": " {text}"
     },
    "custom/applauncher": {
-    "format": "",
+    "format": " ",
     "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi",
     "tooltip": false
   },
@@ -50,8 +59,8 @@
     "interval": 1
   },
   "network": {
-    "format-wifi": " {essid}",
-    "format-ethernet": "󰈀 {ifname}",
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀  {ifname}",
     "format-disconnected": "󰤮  No Network",
     "interval": 5,
     "tooltip": false
