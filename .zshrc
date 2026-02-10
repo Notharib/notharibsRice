@@ -137,9 +137,9 @@ alias stremio='com.stremio.Stremio'
 alias themeChange='./notharibsRice/themeChange'
 alias update='sudo pacman -Syu && yay -Syu --aur'
 alias nclr='clear && fastfetch -l none'
+alias o7='poweroff'
 
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias 67=job
