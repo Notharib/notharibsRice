@@ -11,9 +11,8 @@ cd
 ./notharibsRice/chaotic.sh
 
 # Installation of apps
-sudo pacman -S --needed obsidian localsend librewolf swayfx tty-clock themix-full-git ttf-jetbrains-mono-nerd papirus-icon-theme kdenlive feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh i3blocks gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
-
-flatpak install flathub com.github.IsmaelMartinez.teams_for_linux com.rtosta.zapzap com.stremio.Stremio
+sudo pacman -S --needed wl-clipboard hyprpicker slurp swaync anki teams_for_linux zapzap obsidian localsend librewolf tty-clock themix-full-git ttf-jetbrains-mono-nerd papirus-icon-theme feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
+yay -S swayfx-git
 
 mkdir scripts
 cd scripts
@@ -29,9 +28,6 @@ git clone https://github.com/johnae/persway.git
 cd persway
 cargo build
 cd
-echo ""
-echo "NPM setup (boring coding stuff)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 echo ""
 echo "pywal-obsidianmd (Pywal integration with pywal)"
 git clone https://github.com/poach3r/pywal-obsidianmd.git

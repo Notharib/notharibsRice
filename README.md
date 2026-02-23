@@ -2,4 +2,6 @@
 
 Inside are my config files for my rice, as well as my custom "theme changing" script
 
-There is an automatic installation and setup for all the dotfiles for Arch/Arch-based distros specifically, just run `./notharibsRice/archSetup` from your home directory
+There is an automatic setup script for Arch/Arch-based distros specifically, just run `./notharibsRice/archSetup` from your home directory after booting into your new system
+
+You are able to do *most* things just through the usage of your mouse, however it likely is needed you learn the preconfigured keybinds/configure them to your liking to get the most out of it

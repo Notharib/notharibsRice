@@ -209,16 +209,23 @@ bindsym $mod+r mode "resize"
 #
 # Utilities:
 #
-    # Special keys to adjust volume via PulseAudio
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-    # Special keys to adjust brightness via brightnessctl
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-    # Special key to take a screenshot with grim
-    bindsym $mod+P exec grim
+
+# Special keys to adjust volume via PulseAudio
+bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+
+# Special keys to adjust brightness via brightnessctl
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    
+# Special key to take a screenshot with grim
+bindsym $mod+P exec grim
+bindsym $mod+Shift+P exec grim -g "$(slurp)"
+
+# Colour picker (copies the hex code to your clipboard)
+bindsym $mod+c exec hyprpicker -a
 
 set $transp B0
 
@@ -230,6 +237,11 @@ bar {
 	swaybar_command waybar
 }
 
+#Notifications
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
+#Gaps
 gaps inner 5
 gaps outer 5
 gaps horizontal 5
@@ -255,15 +267,7 @@ exec ./persway/target/debug/persway daemon -e '[tiling] opacity 1' -f '[tiling] 
 
 bindsym $mod+Shift+f exec localsend
 bindsym $mod+Shift+m exec librewolf
-bindsym $mod+x exec swaylock \
-	--screenshots \
-	--clock \
-	--indicator \
-	--indicator-radius 100 \
-	--indicator-thickness 7 \
-	--effect-blur 7x5 \
-	--effect-vignette 0.5:0.5 \
-	--fade-in 0.2
+bindsym $mod+x exec gtklock -t %H:%M:%S
 
 bindsym $mod+Shift+l exec thunar
 bindsym $mod+Shift+Return exec obsidian

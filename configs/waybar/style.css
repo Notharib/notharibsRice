@@ -22,6 +22,7 @@ window#waybar {
 #clock,
 #custom-kernel,
 #custom-applauncher,
+#custom-notification,
 #tray,
 #workspaces,
 #pulseaudio,
@@ -91,7 +92,7 @@ window#waybar {
   margin-left: 5px;
 }
 
-#battery,
-#tray {
+#custom-notification{
   margin-right: 5px;
+  padding-right: 10px;
 }
