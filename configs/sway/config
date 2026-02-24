@@ -274,4 +274,5 @@ bindsym $mod+Shift+Return exec obsidian
 bindsym $mod+Shift+t exec teams-for-linux
 bindsym $mod+Shift+d exec discord
 bindsym $mod+Shift+w exec zapzap
+
 include /etc/sway/config.d/*

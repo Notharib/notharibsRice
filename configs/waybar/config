@@ -75,7 +75,7 @@
     "tooltip": false
   },
   "clock": {
-    "format": "󰅐 {:%H:%M:%S}",
+    "format": "󰅐 {:%r}",
     "tooltip": true,
     "tooltip-format": " {:%d/%m/%Y}",
     "interval": 1
@@ -85,7 +85,8 @@
     "format-ethernet": "󰈀  {ifname}",
     "format-disconnected": "󰤮  No Network",
     "interval": 5,
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "kitty -1 nmtui && exit"
   },
   "pulseaudio": {
     "scroll-step": 5,

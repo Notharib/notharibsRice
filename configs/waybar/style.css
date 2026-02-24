@@ -44,7 +44,10 @@ window#waybar {
   transition-duration: 120ms;
 }
 
-#pulseaudio:hover {
+#pulseaudio:hover,
+#network:hover,
+#custom-applauncher:hover,
+#custom-notification:hover{
   background-image: linear-gradient(to bottom, @color11 100%);
   color: @cursor;
   transition-duration: 120ms;
