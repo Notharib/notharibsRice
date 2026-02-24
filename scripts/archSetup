@@ -11,8 +11,8 @@ cd
 ./notharibsRice/scripts/chaotic.sh
 
 # Installation of apps
-sudo pacman -S --needed wl-clipboard hyprpicker slurp swaync anki teams_for_linux zapzap obsidian localsend librewolf tty-clock themix-full-git ttf-jetbrains-mono-nerd papirus-icon-theme feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh gtklock NetworkManager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
-yay -S swayfx-git
+sudo pacman -S --needed wl-clipboard hyprpicker slurp swaync anki teams-for-linux zapzap obsidian localsend librewolf tty-clock themix-full-git ttf-jetbrains-mono-nerd papirus-icon-theme feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh gtklock networkmanager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder
+yay -S swayfx-git maplemono-nf-unhinted
 
 mkdir scripts
 cd scripts
