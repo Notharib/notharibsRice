@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Installation + setting up of yay
-sudo pacman -S --needed base-devel git
+sudo-rs pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
@@ -11,7 +11,7 @@ cd
 ./notharibsRice/scripts/chaotic.sh
 
 # Installation of apps
-sudo pacman -S --needed wl-clipboard hyprpicker slurp swaync anki teams-for-linux zapzap obsidian localsend librewolf tty-clock themix-full-git feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh gtklock networkmanager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder hyfetch
+sudo-rs pacman -S --needed wl-clipboard hyprpicker slurp swaync anki teams-for-linux zapzap obsidian localsend librewolf tty-clock themix-full-git feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh gtklock networkmanager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder hyfetch
 yay -S swayfx-git maplemono-nf-unhinted wofi-power-menu pipemixer
 
 mkdir scripts
@@ -57,7 +57,7 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim/
 rm -rf ~/.config/nvim/.git
 
 # Setting up zsh and ohmyzsh ()
-sudo chsh -s $(which zsh)
+sudo-rs chsh -s $(which zsh)
 rm .zshrc
 ln -s ~/notharibsRice/.zshrc ~/
 # ALWAYS HAVE THIS LINE RUN LAST
