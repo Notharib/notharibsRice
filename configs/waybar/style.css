@@ -10,92 +10,111 @@
 window#waybar {
   background-image: linear-gradient(to bottom, @background 100%);
   border-radius: 10px;
-  padding: 1px;
+  padding: 0px;
   border-style: solid;
   border-color: @color4;
   border-width: 1px;
+  border-top-width: 0px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 #backlight,
 #battery,
 #network,
 #clock,
-#custom-kernel,
 #custom-applauncher,
 #custom-notification,
+#custom-power,
 #tray,
 #workspaces,
 #pulseaudio,
-#keyboard-state,
+#bluetooth,
 #mode{
-  background-image: linear-gradient(to bottom, @color4 100%);
+  background-image: linear-gradient(to bottom, @background 100%);
 
   margin: 5px;
+  margin-top: 3px;
   margin-right: 0px;
   margin-left: 0px; 
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   border-radius: 5px;
   color: @cursor;
 
   border-style: none;
-  transition-duration: 120ms;
+  transition-duration: 100ms;
 }
 
 #pulseaudio:hover,
 #network:hover,
+#bluetooth:hover,
 #custom-applauncher:hover,
-#custom-notification:hover{
+#custom-notification:hover,
+#custom-power:hover,
+#battery:hover,
+#backlight:hover,
+#clock:hover{
   background-image: linear-gradient(to bottom, @color11 100%);
   color: @cursor;
-  transition-duration: 120ms;
+  transition-duration: 100ms;
 }
 
+#backlight {
+  padding-right: 15px;
+}
+
+#network {
+  padding-right: 10px;
+}
+
+#custom-applauncher {
+  padding-right: 15.5px;
+}
 
 #workspaces button {
   transition-duration: 100ms;
   all: initial;
   min-width: 0;
-  font-weight: bold;
-  color: @foreground;
-  margin-right: 0.2cm;
-  margin-left: 0.2cm;
+
+  color: @color11;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 #workspaces button:hover {
-  transition-duration: 120ms;
-  color: @color8;
+  transition-duration: 100ms;
+  color: @foreground;
 }
 #workspaces button.focused {
-  color: @color3;
+  color: @foreground;
   font-weight: bold;
 }
+
 #workspaces button.active {
-  color: @color2;
+  color: @color11;
   font-weight: bold;
 }
 #workspaces button.urgent {
-  color: @color11;
+  color: @background;
+  background-image: linear-gradient(to bottom, @color11 100%);
 }
 
-#battery {
-  background-color: @color4;
-  color: @cursor;
-}
 #battery.warning,
 #battery.critical,
 #battery.urgent {
   color: @background;
-  background-color: @color11;
+  background-image: linear-gradient(to bottom, @color11 100%);
 }
 
-#custom-applauncher {
+#custom-power {
   margin-left: 5px;
 }
 
 #custom-notification{
   margin-right: 5px;
-  padding-right: 10px;
+  padding-right: 12px;
 }
+

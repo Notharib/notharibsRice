@@ -2,7 +2,7 @@
 
 DIR=${1?Error:No directory given}
 
-wal -n -i "${DIR}"
+wal -n -q -i "${DIR}"
 
 python azoteChange.py "${DIR}"
 

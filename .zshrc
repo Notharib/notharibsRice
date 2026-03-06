@@ -115,12 +115,12 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 source ~/.cache/wal/colors-tty.sh
 eval "$(thefuck --alias fuck)"
 
-fastfetch
+hyfetch
 
 alias ls='ls --color=auto'
 alias py='python3'
 alias la='ls -a'
-alias clr='clear && fastfetch'
+alias clr='clear && hyfetch'
 alias update-grub='grub-mkconfig -o /boot/grub/grub.cfg'
 alias intest='ping archlinux.org'
 alias infix='echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" | sudo tee /etc/resolv.conf'
@@ -131,15 +131,17 @@ alias folderClr='py ~/scripts/clearFolder.py'
 alias kernClr='sudo vkpurge rm all'
 alias vpy='./.venv/bin/python'
 alias cock='tty-clock -sc'
-alias sclr='clear && fastfetch -l EndeavourOS_small'
-alias please='sudo'
+alias please='sudo-rs'
 alias stremio='com.stremio.Stremio'
 alias themeChange='./notharibsRice/themeChange'
-alias update='sudo pacman -Syu && yay -Syu --aur'
+alias update='sudo-rs pacman -Syu && yay -Syu --aur'
 alias nclr='clear && fastfetch -l none'
 alias o7='poweroff'
+alias employment='shutdown now'
 
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f "/home/notharib/.ghcup/env" ] && . "/home/notharib/.ghcup/env" # ghcup-env

@@ -1,32 +1,51 @@
 {
   "layer": "bot",
+  /*"start_hidden": "true",
+  "ipc": "true",
+  "mode": "hide",*/
   "reload-style-on-change":true,
   "spacing": 5,
   "height": 0,
   "margin-bottom": 0,
-  "margin-top": 10,
+  "margin-top": 0,
   "position": "top",
   "margin-right": 10,
   "margin-left": 10,
   "modules-left": [
-    "custom/applauncher",
+    "custom/power",
     "sway/workspaces",
     "tray",
     "sway/mode"
   ],
   "modules-center":[
+    "custom/applauncher"
   ], 
   "modules-right": [
-    "custom/kernel",
     "network",
-    "keyboard-state",
     "backlight",
+    "bluetooth",
     "pulseaudio",
     "clock",
     "battery",
     "custom/notification"
 
   ],
+  "bluetooth":{
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "tooltip": true,
+    "tooltip-format-on": "󰂯 No Connections",
+    "tooltip-format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
+    "on-click": "kitty -1 bluetui && exit"
+  },
+  "tray": {
+    "spacing": 5,
+  },
+  "custom/power":{
+    "format": "",
+    "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi-power-menu",
+    "tooltip": false
+  },
   "custom/notification": {
     "tooltip": true,
     "format": "{icon}",
@@ -47,25 +66,14 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
-  "keyboard-state":{
-    "format": "{icon} {name}",
-    "capslock": true,
-    "format-icons": {
-      "locked": " ",
-      "unlocked":" "
-    }
-  },
   "backlight": {
     "device": "intel_backlight",
-    "format": "{icon} {percent}%",
+    "tooltip-format": "{icon} {percent}%",
+    "format": "{icon}",
     "format-icons": ["", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"]
   },
-  "custom/kernel":{
-      "exec":"uname -or",
-      "format": " {text}"
-    },
    "custom/applauncher": {
-    "format": " ",
+    "format": "",
     "on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi",
     "tooltip": false
   },
@@ -81,18 +89,21 @@
     "interval": 1
   },
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀  {ifname}",
-    "format-disconnected": "󰤮  No Network",
+    "tooltip-format-wifi": "  {essid}",
+    "tooltip-format-ethernet": "󰈀  {ifname}",
+    "tooltip-format-disconnected": "󰤮  No Network",
+    "format-wifi": " ",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰤮 ",
     "interval": 5,
-    "tooltip": false,
+    "tooltip": true,
     "on-click": "kitty -1 nmtui && exit"
   },
   "pulseaudio": {
     "scroll-step": 5,
     "max-volume": 150,
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
+    "tooltip-format": "{icon} {volume}%",
+    "format": "{icon}",
     "format-icons": [
       "",
       "",
@@ -100,8 +111,8 @@
     ],
     "nospacing": 1,
     "format-muted": " ",
-    "on-click": "pavucontrol",
-    "tooltip": false
+    "on-click": "kitty -1 pipemixer && exit",
+    "tooltip": true
   },
   "battery": {
     "states": {

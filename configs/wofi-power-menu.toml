@@ -1,0 +1,2 @@
+[wofi]
+extra_args = "-l top_left -x 10"
