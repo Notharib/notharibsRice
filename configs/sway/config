@@ -20,14 +20,17 @@ set $term kitty -1
 set $menu wofi
 ### Output configuration
 
+exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+
 exec pipewire
 
-exec ~/.azotebg
+exec awww-daemon
+exec ~/.swwwbg
 
 include "$HOME/.cache/wal/colors-sway"
 
 output eDP-1 {
-	mode 1366x786@60.059Hz
+	mode 1920x1080@120.003Hz
 	pos 1366 0
 }
 
@@ -260,11 +263,16 @@ blur enable
 
 shadows enable
 shadow_blur_radius 10
+shadow_offset 5 5
 
-animation_duration_ms 150
+default_dim_inactive 0.1
+dim_inactive_colors.unfocused $background
+
+animation_duration_ms 175
 
 
-exec ./persway/target/debug/persway daemon -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
+#exec ./persway/target/debug/persway daemon -e '[tiling] opacity 1' -f '[tiling] opacity 0.95; opacity 1' -d spiral
+exec autotiling-rs 
 
 bindsym $mod+Shift+f exec localsend
 bindsym $mod+Shift+m exec librewolf

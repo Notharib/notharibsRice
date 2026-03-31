@@ -4,12 +4,14 @@ DIR=${1?Error:No directory given}
 
 wal -n -q -i "${DIR}"
 
-python azoteChange.py "${DIR}"
+python swwwchange.py "${DIR}"
 
-./.azotebg
+./.swwwbg
 
 oomox-cli -o walGenerated ~/.cache/wal/colors-oomox
 oomox-gnome-colors-icons-cli -o wal-icons ~/.cache/wal/colors-oomox
 gtk-update-icon-cache
 
 ./pywal-obsidianmd/pywal-obsidianmd.sh ~/Obsidian\ Vault
+
+clear && hyfetch

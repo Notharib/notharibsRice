@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history tmux) 
+plugins=(git history) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,12 +132,13 @@ alias kernClr='sudo vkpurge rm all'
 alias vpy='./.venv/bin/python'
 alias cock='tty-clock -sc'
 alias please='sudo-rs'
-alias stremio='com.stremio.Stremio'
 alias themeChange='./notharibsRice/themeChange'
 alias update='sudo-rs pacman -Syu && yay -Syu --aur'
 alias nclr='clear && fastfetch -l none'
 alias o7='poweroff'
 alias employment='shutdown now'
+alias scannet='sudo-rs nmap -sC -sV -sS'
+alias yay='yay --sudo sudo-rs'
 
 
 export NVM_DIR="$HOME/.config/nvm"
@@ -145,3 +146,4 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f "/home/notharib/.ghcup/env" ] && . "/home/notharib/.ghcup/env" # ghcup-env
+alias gay=/usr/bin/hyfetch

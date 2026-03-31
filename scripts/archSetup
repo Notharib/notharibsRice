@@ -11,8 +11,8 @@ cd
 ./notharibsRice/scripts/chaotic.sh
 
 # Installation of apps
-sudo-rs pacman -S --needed wl-clipboard hyprpicker slurp swaync anki teams-for-linux zapzap obsidian localsend librewolf tty-clock themix-full-git feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh gtklock networkmanager cava cmatrix bluetui fzf unzip ly azote wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder hyfetch
-yay -S swayfx-git maplemono-nf-unhinted wofi-power-menu pipemixer
+sudo-rs pacman -S --needed tumbler cups openssh ffmpegthumbnailer wiremix libgsf poppler-glib wl-clipboard hyprpicker slurp swaync anki teams-for-linux zapzap obsidian localsend librewolf tty-clock themix-full-git feh discord mpv python-pip brightnessctl nwg-look swaybg grim lazygit tlpui system-config-printer git thunar waybar zsh gtklock networkmanager cava cmatrix bluetui fzf unzip ly awww wofi foot flatpak fastfetch libreoffice python-pywal thefuck btop neovim wf-recorder hyfetch
+yay -S swayfx-git maplemono-nf-unhinted wofi-power-menu-bin
 
 mkdir scripts
 cd scripts
@@ -63,8 +63,14 @@ ln -s ~/notharibsRice/.zshrc ~/
 # ALWAYS HAVE THIS LINE RUN LAST
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Enabling of services
+please systemctl enable ly@tty2.service
+systemctl --user enable pipewire.service
+systemctl --user enable pipewire-pulse.service
+systemctl --user enable wireplumber.service
+please systemctl enable cups.service
+
 # Things still to setup manually:
-#   1) First Time Azote run
-#   2) Run the themeChange script to generate colours
-#   3) Enable services (emptty, NetworkManager, etc)
-#   4) Setup LazyVim config
+#   1) Run the themeChange script to generate colours
+#   2) Enable services (emptty, NetworkManager, etc)
+#   3) Setup LazyVim config

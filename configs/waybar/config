@@ -1,8 +1,5 @@
 {
   "layer": "bot",
-  /*"start_hidden": "true",
-  "ipc": "true",
-  "mode": "hide",*/
   "reload-style-on-change":true,
   "spacing": 5,
   "height": 0,
@@ -111,7 +108,7 @@
     ],
     "nospacing": 1,
     "format-muted": " ",
-    "on-click": "kitty -1 pipemixer && exit",
+    "on-click": "kitty -1 wiremix && exit",
     "tooltip": true
   },
   "battery": {
